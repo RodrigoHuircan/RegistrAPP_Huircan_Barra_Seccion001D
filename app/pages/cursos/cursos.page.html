@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="warning">Mis Cursos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content color="light">
+  <br><br><br>
+  <ion-list [inset]="true">
+    <ion-item>
+      <ion-label>Asignatura Nº1: {{ ramoDocente }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Duración: {{ duracionRamo }} Semestre(s)</ion-label>
+    </ion-item>
+    <br><br>
+    <ion-item>
+      <ion-label>Asignatura Nº2: {{ ramoDocente2 }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Duración: {{ duracionRamo2 }} Semestre(s)</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

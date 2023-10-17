@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="warning">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--Card-->
+  <ion-card>
+    <!--Header-->
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+
+    <!--Content-->
+    <ion-card-content>
+      <form [formGroup] = "formularioLogin">
+
+        <!--Items-->
+        <ion-item>
+          <ion-label position = "floating">Correo: </ion-label>
+          <ion-input formControlName = "correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position = "floating">Password: </ion-label>
+          <ion-input formControlName = "password" type = "password"></ion-input>
+        </ion-item>
+      </form>
+      <br> 
+      <!--Buttons-->
+      <ion-button (click)="Ingresar()" expand="block" fill="outline" shape="round" color="warning">
+        Ingresar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro-docente']" color="warning">
+        Registrarse
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

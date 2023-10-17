@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="warning">Inicio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<br><br><br><br>
+
+<ion-content class="ion-padding">
+  <div style="text-align: center;">
+  <img src="/assets/icon/R.png"/>
+  </div>
+
+  <h1 class="ion-text-center">¡Hola! {{ userName }}</h1>
+
+  <br><br>
+
+  <ion-button routerLink="/nosotros" expand="block" color="warning">
+    Nosotros
+  </ion-button>
+  <br>
+  <ion-button routerLink="/api" expand="block" color="warning">
+    Noticias
+  </ion-button>
+
+</ion-content>

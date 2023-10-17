@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="warning">Registro Docente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card> 
+    <ion-card-header>
+      <ion-card-title>Registro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup] = "formularioRegistro" (keyup.enter) = "CrearUsuario()">
+        <br><h3>Datos personales</h3>
+        <ion-item>
+          <ion-label position = "floating">Nombre</ion-label>
+          <ion-input type="text" formControlName = "nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position = "floating">Correo</ion-label>
+          <ion-input type="text" formControlName = "correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position = "floating">Password</ion-label>
+          <ion-input type="password" formControlName = "password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position = "floating">Confirm Password</ion-label>
+          <ion-input type="password" formControlName = "confirmPass"></ion-input>
+        </ion-item>
+        <br><h3>Primer Ramo</h3>
+        <ion-item>
+          <ion-label position = "floating">Ramo</ion-label>
+          <ion-input type="text" formControlName = "ramo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position = "floating">Duracion</ion-label>
+          <ion-input type="number" formControlName = "duracion"></ion-input>
+        </ion-item>
+        <br><h3>Segundo Ramo</h3>
+        <ion-item>
+          <ion-label position = "floating">Ramo</ion-label>
+          <ion-input type="text" formControlName = "ramo2"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position = "floating">Duracion</ion-label>
+          <ion-input type="number" formControlName = "duracion2"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="CrearUsuario()" expand="block" fill="outline" shape="round" routerLink="/login-docente" color="warning">
+          Registrarse
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
